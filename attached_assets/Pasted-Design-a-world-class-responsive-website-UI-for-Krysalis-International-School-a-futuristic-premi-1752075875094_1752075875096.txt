@@ -1,0 +1,67 @@
+Design a world-class, responsive website UI for 'Krysalis International School', a futuristic, premium CBSE institution focused on holistic education. The design must feel elegant, trustworthy, and tech-savvy – appealing to parents of young learners and students alike.
+
+🎨 Design Style:
+
+Clean, modern layout
+
+Soft gradient background (Lavender + Royal Blue + White tones)
+
+Glassmorphism or Neumorphism elements
+
+Smooth animations using Framer Motion or GSAP
+
+Use modern fonts like 'Poppins', 'Raleway', or 'Inter'
+
+Large padding, soft shadows, rounded corners
+
+Eye-catching but subtle animations
+
+📱 Layout Requirements:
+
+Hero Section: Full-screen, with a video background or slider of the school campus and kids learning, headline like “Shaping Young Minds for Tomorrow”
+
+Top Navigation: Sticky navbar with links – Home, About, Academics, Facilities, Admissions, Gallery, Contact
+
+About Section: Vision, Mission with icons and timeline animation
+
+Academics Section: Cards or Tabs for Pre-Primary, Primary, Middle, and High School with curriculum highlights
+
+Facilities Section:
+
+Digital Classrooms
+
+Robotics & AI Lab
+
+Play Stations
+
+Sports Ground (Football, Cricket Nets, Volleyball)
+
+Computer Labs
+
+Safe Transport & CCTV
+
+Extra-Curricular Section: Debates, Public Speaking, Creative Arts, Personality Development
+
+Gallery: Responsive image slider or masonry grid
+
+Why Choose Us: Icons + short lines (Student-Centered, Tech-Driven, Holistic Growth)
+
+Admission CTA Section: “Enroll Now” button with a modern form popup
+
+Contact Section: Google Maps Embed + Form + School Address
+
+🧠 Additional Features:
+
+Live Chat Bot (like Bolt AI) for admission queries
+
+Testimonials Carousel
+
+Footer with: Social media icons, newsletter signup, contact info
+
+Mobile-first responsive design
+
+🛠️ Tech Stack (optional for code output):
+React + Tailwind CSS + Framer Motion + React Router DOM
+
+💡 The entire design should reflect creativity, care, and innovation in education. Use realistic placeholder content and ensure accessibility."
+
