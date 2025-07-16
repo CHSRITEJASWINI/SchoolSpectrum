@@ -48,7 +48,7 @@ export default function Academics() {
       image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
     },
     "senior": {
-      title: "Senior School (Grades 9-12)",
+      title: "Senior School (Grades 9-10)",
       description: "Specialized streams and career guidance with focus on board exam excellence and college preparation.",
       features: [
         "Science, Commerce, and Arts streams",
