@@ -10,7 +10,6 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -24,46 +23,59 @@ export default function Navigation() {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white/95 backdrop-blur-md border-b border-gray-200" : "bg-white/95 backdrop-blur-md"
-    }`}>
-      <div className="container mx-auto px-4 py-3">
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/90 shadow-xl backdrop-blur-md border-b border-gray-200"
+          : "bg-transparent"
+      } font-[Poppins]`}
+    >
+      {/* Floating butterflies */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <span
+            key={i}
+            className={`absolute text-xl sm:text-2xl md:text-3xl butterfly-animation left-[${10 + i * 15}%] top-[${Math.random() * 60 + 10}%]`}
+          >
+            🦋
+          </span>
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 py-4 relative z-10">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl butterfly-float">🦋</span>
-            <span className="text-2xl font-bold text-gradient">Krysalis</span>
-            <span className="text-gray-600 font-medium hidden sm:inline">International School</span>
+          {/* Brand */}
+          <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0 sm:space-x-3">
+            <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 bg-clip-text text-transparent drop-shadow-glow tracking-wide">
+              Krysalis
+            </h1>
+            <span className="text-sm sm:text-base text-gray-600 italic font-light tracking-widest custom-font">
+              International School
+            </span>
           </div>
-          
+
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection("home")} className="text-gray-700 hover:text-primary transition-colors">
-              Home
-            </button>
-            <button onClick={() => scrollToSection("about")} className="text-gray-700 hover:text-primary transition-colors">
-              About
-            </button>
-            <button onClick={() => scrollToSection("academics")} className="text-gray-700 hover:text-primary transition-colors">
-              Academics
-            </button>
-            <button onClick={() => scrollToSection("facilities")} className="text-gray-700 hover:text-primary transition-colors">
-              Facilities
-            </button>
-            <button onClick={() => scrollToSection("gallery")} className="text-gray-700 hover:text-primary transition-colors">
-              Gallery
-            </button>
-            <button onClick={() => scrollToSection("contact")} className="text-gray-700 hover:text-primary transition-colors">
-              Contact
-            </button>
+            {["home", "about", "academics", "facilities", "gallery", "contact"].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="text-gray-700 font-medium hover:text-blue-700 transition-transform hover:scale-105"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </button>
+            ))}
           </div>
-          
+
+          {/* Enroll Button + Hamburger */}
           <div className="flex items-center space-x-4">
-            <Button 
+            <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-primary text-white hover:bg-primary/90 rounded-2xl"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold px-6 py-2 rounded-full hover:scale-105 hover:shadow-lg transition-all"
             >
               Enroll Now
             </Button>
-            
+
             <Button
               variant="ghost"
               size="sm"
@@ -74,28 +86,19 @@ export default function Navigation() {
             </Button>
           </div>
         </div>
-        
+
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
-            <button onClick={() => scrollToSection("home")} className="block w-full text-left text-gray-700 hover:text-primary transition-colors">
-              Home
-            </button>
-            <button onClick={() => scrollToSection("about")} className="block w-full text-left text-gray-700 hover:text-primary transition-colors">
-              About
-            </button>
-            <button onClick={() => scrollToSection("academics")} className="block w-full text-left text-gray-700 hover:text-primary transition-colors">
-              Academics
-            </button>
-            <button onClick={() => scrollToSection("facilities")} className="block w-full text-left text-gray-700 hover:text-primary transition-colors">
-              Facilities
-            </button>
-            <button onClick={() => scrollToSection("gallery")} className="block w-full text-left text-gray-700 hover:text-primary transition-colors">
-              Gallery
-            </button>
-            <button onClick={() => scrollToSection("contact")} className="block w-full text-left text-gray-700 hover:text-primary transition-colors">
-              Contact
-            </button>
+          <div className="md:hidden mt-4 space-y-4 animate-fade-in">
+            {["home", "about", "academics", "facilities", "gallery", "contact"].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="block w-full text-left text-gray-700 font-medium hover:text-purple-600 transition-transform"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </button>
+            ))}
           </div>
         )}
       </div>

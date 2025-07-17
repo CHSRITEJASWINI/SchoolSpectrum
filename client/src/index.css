@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap');
 
 :root {
   --background: hsl(0, 0%, 100%);
@@ -187,3 +188,52 @@
     opacity: 1; 
   }
 }
+
+/* Krysalis Title Style */
+.krysalis-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #b57edc, #ffb6c1, #87cefa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+/* International School Subtext */
+.school-subtext {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #555;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in;
+}
+
+/* Background Trees / Leaves */
+.trees-bg {
+  background-image: url('/assets/trees-bg.svg'); /* Or use a soft PNG/SVG */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.2;
+}
+
+/* Butterflies */
+.butterfly {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  animation: butterfly-float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Glow animation for Krysalis */
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff87ff, 0 0 15px #ff87ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #b57edc, 0 0 30px #b57edc;
+  }
+}
+

@@ -169,7 +169,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Address</h4>
-                    <p className="text-gray-600">123 Education Street, Knowledge City, State 500001</p>
+                    <p className="text-gray-600">Near valasapalli cross road,Dharmaji gudem,Lingapalam mandal,Eluru Dist,A.P 534003</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -178,7 +178,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Phone</h4>
-                    <p className="text-gray-600">+91 9876543210</p>
+                    <p className="text-gray-600">+91 8639309447</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -187,7 +187,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Email</h4>
-                    <p className="text-gray-600">info@krysalis.edu.in</p>
+                    <p className="text-gray-600">krysalisinternationalschool@gmail.com</p>
                   </div>
                 </div>
               </div>
