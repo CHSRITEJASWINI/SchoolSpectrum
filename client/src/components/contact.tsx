@@ -1,3 +1,5 @@
+// Contact.tsx
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -20,8 +22,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Basic validation
+
     if (!formData.name || !formData.phone || !formData.email || !formData.grade || !formData.message) {
       toast({
         title: "Please fill in all fields",
@@ -31,13 +32,11 @@ export default function Contact() {
       return;
     }
 
-    // Success message
     toast({
       title: "Message sent successfully!",
       description: "Thank you for your interest. We will contact you soon.",
     });
 
-    // Reset form
     setFormData({
       name: "",
       phone: "",
@@ -52,7 +51,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 gradient-bg">
+    <section id="contact" className="py-20 gradient-bg text-white">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -61,14 +60,14 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Get in <span className="text-gradient">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+             <span className="text-gradient"> Get in Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-2xl mx-auto">
             Have questions? We're here to help you every step of the way
           </p>
         </motion.div>
-        
+
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div 
@@ -78,49 +77,49 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
+            <h3 className="text-2xl font-bold mb-6 text-white">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="name" className="text-gray-700 font-medium mb-2">Parent Name</Label>
+                  <Label htmlFor="name" className="text-white font-medium mb-2">Parent Name</Label>
                   <Input
                     id="name"
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Your full name"
-                    className="rounded-xl"
+                    className="rounded-xl text-black"
                     required
                   />
                 </div>
                 <div>
-                  <Label htmlFor="phone" className="text-gray-700 font-medium mb-2">Phone Number</Label>
+                  <Label htmlFor="phone" className="text-white font-medium mb-2">Phone Number</Label>
                   <Input
                     id="phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     placeholder="Your phone number"
-                    className="rounded-xl"
+                    className="rounded-xl text-black"
                     required
                   />
                 </div>
               </div>
               <div>
-                <Label htmlFor="email" className="text-gray-700 font-medium mb-2">Email Address</Label>
+                <Label htmlFor="email" className="text-white font-medium mb-2">Email Address</Label>
                 <Input
                   id="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
                   placeholder="Your email address"
-                  className="rounded-xl"
+                  className="rounded-xl text-black"
                   required
                 />
               </div>
               <div>
-                <Label htmlFor="grade" className="text-gray-700 font-medium mb-2">Child's Age/Grade</Label>
+                <Label htmlFor="grade" className="text-white font-medium mb-2">Child's Age/Grade</Label>
                 <Select value={formData.grade} onValueChange={(value) => handleInputChange("grade", value)}>
-                  <SelectTrigger className="rounded-xl">
+                  <SelectTrigger className="rounded-xl text-black">
                     <SelectValue placeholder="Select grade level" />
                   </SelectTrigger>
                   <SelectContent>
@@ -132,14 +131,14 @@ export default function Contact() {
                 </Select>
               </div>
               <div>
-                <Label htmlFor="message" className="text-gray-700 font-medium mb-2">Message</Label>
+                <Label htmlFor="message" className="text-white font-medium mb-2">Message</Label>
                 <Textarea
                   id="message"
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
                   placeholder="Tell us about your requirements..."
                   rows={4}
-                  className="rounded-xl"
+                  className="rounded-xl text-black"
                   required
                 />
               </div>
@@ -151,8 +150,8 @@ export default function Contact() {
               </Button>
             </form>
           </motion.div>
-          
-          {/* Contact Information */}
+
+          {/* Contact Info */}
           <div className="space-y-8">
             <motion.div 
               className="glassmorphism rounded-3xl p-8"
@@ -161,15 +160,15 @@ export default function Contact() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
-              <div className="space-y-4">
+              <h3 className="text-2xl font-bold mb-6 text-white">Contact Information</h3>
+              <div className="space-y-4 text-white">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                     <MapPin className="text-primary" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Address</h4>
-                    <p className="text-gray-600">Near valasapalli cross road,Dharmaji gudem,Lingapalam mandal,Eluru Dist,A.P 534003</p>
+                    <h4 className="font-semibold">Address</h4>
+                    <p className="text-gray-200">Near valasapalli cross road, Dharmaji gudem, Lingapalam mandal, Eluru Dist, A.P 534003</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -177,8 +176,8 @@ export default function Contact() {
                     <Phone className="text-secondary" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Phone</h4>
-                    <p className="text-gray-600">+91 8639309447</p>
+                    <h4 className="font-semibold">Phone</h4>
+                    <p className="text-gray-200">+91 8639309447</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -186,13 +185,13 @@ export default function Contact() {
                     <Mail className="text-accent" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Email</h4>
-                    <p className="text-gray-600">krysalisinternationalschool@gmail.com</p>
+                    <h4 className="font-semibold">Email</h4>
+                    <p className="text-gray-200">krysalisinternationalschool@gmail.com</p>
                   </div>
                 </div>
               </div>
             </motion.div>
-            
+
             {/* Map */}
             <motion.div 
               className="glassmorphism rounded-3xl p-8"
@@ -201,7 +200,7 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Find Us</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">Find Us</h3>
               <div className="aspect-video rounded-xl overflow-hidden">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1!2d-73.986!3d40.748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzUzLjAiTiA3M8KwNTknMDkuNiJX!5e0!3m2!1sen!2sus!4v1234567890" 

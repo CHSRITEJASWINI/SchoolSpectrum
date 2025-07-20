@@ -22,7 +22,7 @@ export default function FloatingElements() {
   };
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/919876543210", "_blank");
+    window.open("https://wa.me/8639309447", "_blank");
   };
 
   return (

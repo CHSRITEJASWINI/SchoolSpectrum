@@ -236,4 +236,8 @@
     text-shadow: 0 0 10px #fff, 0 0 20px #b57edc, 0 0 30px #b57edc;
   }
 }
+.gradient-bg {
+  background: linear-gradient(to right, #020617, #0f172a);
+}
+
 
