@@ -26,6 +26,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <FloatingElements />
+      
     </div>
   );
 }

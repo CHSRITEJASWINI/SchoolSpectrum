@@ -9,8 +9,7 @@ export default function Academics() {
   const tabs = [
     { id: "pre-primary", label: "Pre-Primary" },
     { id: "primary", label: "Primary" },
-    { id: "middle", label: "Middle" },
-    { id: "senior", label: "Senior" },
+    { id: "High School", label: "High School" },
   ];
 
   const tabContent = {
@@ -33,22 +32,11 @@ export default function Academics() {
         "Digital literacy programs",
         "Science experiments and discovery",
         "Language development",
-      ],
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=600&h=400",
+      ],image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&h=400",
     },
-    "middle": {
-      title: "Middle School (Grades 6-8)",
-      description: "Comprehensive subject mastery with focus on analytical thinking, research skills, and preparation for higher education.",
-      features: [
-        "Advanced CBSE curriculum",
-        "STEM programs and robotics",
-        "Research projects and presentations",
-        "Competitive exam preparation",
-      ],
-      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&h=400",
-    },
-    "senior": {
-      title: "Senior School (Grades 9-10)",
+    
+    "High School": {
+      title: "Senior School (Grades 6-10)",
       description: "Specialized streams and career guidance with focus on board exam excellence and college preparation.",
       features: [
         "Science, Commerce, and Arts streams",

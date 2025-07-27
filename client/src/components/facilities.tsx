@@ -17,13 +17,7 @@ export default function Facilities() {
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
       color: "secondary",
     },
-    {
-      icon: Gamepad2,
-      title: "Play Stations",
-      description: "Dedicated recreational areas with modern play equipment and supervised activities.",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      color: "accent",
-    },
+   
     {
       icon: Volleyball,
       title: "Sports Ground",
