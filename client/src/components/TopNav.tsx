@@ -1,5 +1,4 @@
 import React from "react";
-
 const TopNav = () => {
   return (
     <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
@@ -17,5 +16,4 @@ const TopNav = () => {
     </nav>
   );
 };
-
 export default TopNav;

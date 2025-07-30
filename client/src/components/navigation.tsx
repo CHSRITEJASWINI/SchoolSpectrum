@@ -102,7 +102,7 @@ export default function Navigation() {
             </div>
 
             {/* Other Nav Links */}
-            {["academics", "facilities", "gallery", "contact"].map((item) => (
+            {["academics", "facilities", "gallery"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
