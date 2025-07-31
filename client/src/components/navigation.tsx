@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 
-export default function Navigation() {
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
@@ -21,18 +21,18 @@ export default function Navigation() {
   };
 
   const aboutLinks = [
-    "About krysalis",
+    "about krysalis",
     "chairman",
     "managing director",
     "principal",
-    "Our mission",
-    "Our vision",
+    "our mission",
+    "our vision",
     "contact",
   ];
 
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white font-[Poppins] overflow-hidden">
-      {/* Navigation Bar */}
+      {/* Navbar */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled
@@ -40,7 +40,7 @@ export default function Navigation() {
             : "bg-black"
         }`}
       >
-        {/* Butterfly Emoji Background */}
+        {/* Emoji Animation */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           {Array.from({ length: 6 }).map((_, i) => (
             <span
@@ -57,7 +57,7 @@ export default function Navigation() {
           ))}
         </div>
 
-        {/* Main Nav Container */}
+        {/* Main Navbar */}
         <div className="container mx-auto px-4 py-5 relative z-10 flex justify-between items-center">
           {/* Logo */}
           <div className="text-center sm:text-left">
@@ -69,7 +69,7 @@ export default function Navigation() {
             </h1>
           </div>
 
-          {/* Desktop Nav */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 text-lg font-medium">
             <button
               onClick={() => scrollToSection("home")}
@@ -101,7 +101,6 @@ export default function Navigation() {
               )}
             </div>
 
-            {/* Other Nav Links */}
             {["academics", "facilities", "gallery"].map((item) => (
               <button
                 key={item}
@@ -113,35 +112,29 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu Toggle */}
           <Button
             variant="ghost"
             size="sm"
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? (
-              <X className="text-white" />
-            ) : (
-              <Menu className="text-white" />
-            )}
+            {isMobileMenuOpen ? <X className="text-white" /> : <Menu className="text-white" />}
           </Button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-black px-6 py-4 space-y-3 text-white text-lg">
-            {["home", "academics", "facilities", "gallery", "contact"].map(
-              (item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className="block w-full text-left font-medium hover:text-yellow-400 transition capitalize"
-                >
-                  {item}
-                </button>
-              )
-            )}
+            {["home", "academics", "facilities", "gallery", "contact"].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="block w-full text-left font-medium hover:text-yellow-400 transition capitalize"
+              >
+                {item}
+              </button>
+            ))}
 
             {/* Mobile About Dropdown */}
             <div className="space-y-1">
@@ -174,9 +167,7 @@ export default function Navigation() {
         <div className="max-w-xl space-y-8 text-center md:text-left">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight">
             Your Kids Deserve <br />
-            <span className="text-yellow-400 drop-shadow-lg">
-              The Best Education
-            </span>
+            <span className="text-yellow-400 drop-shadow-lg">The Best Education</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 font-medium">
             Active Learning, Expert Teachers & Safe Environment
@@ -189,7 +180,7 @@ export default function Navigation() {
           </Button>
         </div>
 
-        {/* Video */}
+        {/* Hero Video */}
         <div className="relative">
           <div className="w-full max-w-[1000px] h-[600px] rounded-2xl shadow-2xl overflow-hidden mx-auto md:mx-0">
             <video
@@ -204,11 +195,11 @@ export default function Navigation() {
         </div>
       </section>
 
-      {/* Decorative Blobs */}
+      {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 w-[250px] h-[250px] bg-yellow-400 rounded-full blur-3xl opacity-30 -z-10"></div>
       <div className="absolute top-0 right-0 w-[250px] h-[250px] bg-blue-400 rounded-full blur-3xl opacity-30 -z-10"></div>
 
-      {/* Fly Animation Style */}
+      {/* Animation Styles */}
       <style>{`
         @keyframes fly-up {
           0% {

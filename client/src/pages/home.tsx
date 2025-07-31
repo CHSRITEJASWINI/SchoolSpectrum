@@ -11,6 +11,7 @@ import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import FloatingElements from "@/components/floating-elements";
 
+
 export default function Home() {
   return (
     <div className="min-h-screen beautiful-gradient">
@@ -26,6 +27,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <FloatingElements />
+    
       
     </div>
   );
