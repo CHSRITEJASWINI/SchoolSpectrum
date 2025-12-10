@@ -10,8 +10,14 @@ import NotFound from "@/pages/not-found";
 import Chairman from "@/pages/Chairman";
 import ManagingDirector from "@/pages/ManagingDirector";
 import Principal from "@/pages/Principal";
-import Mission from "@/pages/Mission";
+import Mission from "@/pages/Mission/Vision";
 import Vision from "@/pages/Vision";
+import FeeStructure from "./pages/fee-structure";
+import Scholarships from "./pages/scholarships";
+import ApplicationForm from "./pages/application-form";
+import DeveloperProfile from "./pages/DeveloperProfile";
+import Enrollment from "./pages/Enrollment";
+
 
 function AppRoutes() {   // <-- renamed here
   return (
@@ -22,6 +28,12 @@ function AppRoutes() {   // <-- renamed here
       <Route path="/principal" component={Principal} />
       <Route path="/mission" component={Mission} />
       <Route path="/vision" component={Vision} />
+      <Route path="/fee-structure" component={FeeStructure}/>
+      <Route path="/scholarships" component={Scholarships}/>
+      <Route path="/application-form" component={ApplicationForm}/>
+      <Route path="/DeveloperProfile" component={DeveloperProfile}/>
+      <Route path="/Enrollment" component={Enrollment}/>
+    
       <Route component={NotFound} />
     </Switch>
   );

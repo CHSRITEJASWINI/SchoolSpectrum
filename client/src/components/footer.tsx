@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
 import { Facebook, Instagram, Youtube, Send } from "lucide-react";
 
 export default function Footer() {
@@ -92,10 +93,12 @@ export default function Footer() {
           >
             <h4 className="text-lg font-semibold mb-6">Admissions</h4>
             <ul className="space-y-3 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Enrollment Process</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Fee Structure</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Scholarships</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Application Form</a></li>
+              <li><a href="/enrollment" className="hover:text-white transition-colors">Enrollment Process</a></li>
+
+              <li><a href="/fee-structure" className="hover:text-white transition-colors">Fee Structure</a></li>
+              <li><a href="/application-form" className="hover:text-white transition-colors">Application Form</a></li>
+              <li><a href="/scholarships" className="hover:text-white transition-colors">Scholarships</a></li>
+    
             </ul>
           </motion.div>
           
@@ -121,7 +124,18 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Krysalis International School. All rights reserved.</p>
+          <p>
+            &copy; 2025 Krysalis International School. All rights reserved. <br />
+            Developed by{" "}
+            <a 
+              href="https://your-link-here.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary hover:underline"
+            >
+              Tejuuu
+            </a>
+          </p>
         </div>
       </div>
     </footer>
